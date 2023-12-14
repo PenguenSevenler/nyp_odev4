@@ -58,6 +58,25 @@ namespace Odev
             {
                 Console.WriteLine($"{invoice.PartDescription} - {invoice.Quantity}");
             }
+
+            var sortedBYvalue = 
+            from invoice in arrayOfInvoice let InvoiceTotal = invoice.Quantity*invoice.Price
+            orderby InvoiceTotal ascending select new {invoice.PartDescription, InvoiceTotal};
+            Console.Write("\nObjects sorted by value\n");
+            foreach (var invoice in sortedBYvalue)
+            {
+                Console.WriteLine($"{invoice.PartDescription} - {invoice.InvoiceTotal}");
+            }
+
+            var selectBYvalue = 
+            from invoice in sortedBYvalue
+            where invoice.InvoiceTotal >= 200 && invoice.InvoiceTotal <= 500
+            select invoice;
+            Console.Write("\nObjects selected by value\n");
+            foreach (var invoice in selectBYvalue)
+            {
+                Console.WriteLine($"{invoice.PartDescription} - {invoice.InvoiceTotal}");
+            }
         }
     }
 }
