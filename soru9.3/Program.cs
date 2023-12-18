@@ -34,10 +34,10 @@ namespace Odev
             arrayOfInvoice[6]=new Invoice(56,"Jig saw",21,(decimal)11.00);
             arrayOfInvoice[7]=new Invoice(3,"Wrench",34,(decimal)7.50);
 
-            IEnumerable<Invoice> sortedBYpartnumber = 
-            from invoice in arrayOfInvoice orderby invoice.PartNumber ascending select invoice;
-            Console.Write("\nObjects sorted by part number\n");
-            foreach (Invoice invoice in sortedBYpartnumber)
+            IEnumerable<Invoice> sortedBYdescription = 
+            from invoice in arrayOfInvoice orderby invoice.PartDescription ascending select invoice;
+            Console.Write("\nObjects sorted by part description\n");
+            foreach (Invoice invoice in sortedBYdescription)
             {
                 Console.WriteLine($"{invoice.PartNumber} - {invoice.PartDescription} - {invoice.Quantity} - {invoice.Price}");
             }
