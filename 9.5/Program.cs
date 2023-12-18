@@ -8,12 +8,15 @@ namespace Pet
         internal static void Main(string[] args)
         {
             List<string> pets = new List<string>();
-            pets.Add("tekir");
-            pets.Add("sarıkız");
-            pets.Add("karabaş");
-            pets.Add("boncuk");
-            pets.Add("saçlı");
-            pets.Add("sarıkız");
+            pets.Add("Kedi");
+            pets.Add("Sarıkız");
+            pets.Add("Cambaz");
+            pets.Add("Renkli");
+            pets.Add("Saçlı");
+            pets.Add("Cambaz");
+            pets.Add("Su");
+            pets.Add("Tomy");
+            pets.Add("Tom");
             pets.Add("Aslan Alex");
             pets.Add("Bakmalık Balık");
 
